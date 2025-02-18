@@ -61,7 +61,7 @@ const kelvinToCelcius = (kelvin) => {
 }
 
 const getWeatherData = async () => {
-    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=2cd8c0e07b87a295ac507ad901015003`
+    const weatherUrl = `httpss://api.openweathermap.org/data/2.5/weather?q=${city}&appid=2cd8c0e07b87a295ac507ad901015003`
     try {
         const res = await fetch(weatherUrl);
         const data = await res.json();
