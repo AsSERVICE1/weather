@@ -56,6 +56,10 @@ citySearch.addEventListener('submit', (e) => {
     cityName.value = ""
 })
 
+const kelvinToCelcius = (kelvin) => {
+    return (kelvin-273.15).toFixed(1);
+}
+
 const getWeatherData = async () => {
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=2cd8c0e07b87a295ac507ad901015003`
     try {
@@ -65,17 +69,19 @@ const getWeatherData = async () => {
 
         const {dt, main, sys, weather, wind, name} = data;
 
-        temp.innerHTML = main.temp;
+        
 
-        prePercent.innerHTML = main.feels_like;
+        temp.innerHTML = kelvinToCelcius(main.temp)+ "&#176;";
+
+        prePercent.innerHTML = kelvinToCelcius(main.feels_like);
 
         humidPercent.innerHTML = `${main.humidity}%` ; 
 
         windKm.innerHTML = `${wind.speed} km/h`; 
 
-        weatherMin.innerHTML = `min: ${main.temp_min.toFixed()}&#176;` ;
+        weatherMin.innerHTML = `min: ${kelvinToCelcius(main.temp_min.toFixed())}&#176;` ;
 
-        weatherMax.innerHTML = `max: ${main.temp_max.toFixed()}&#176;` ;
+        weatherMax.innerHTML = `max: ${kelvinToCelcius(main.temp_max.toFixed())}&#176;` ;
 
         weatherType.innerHTML = weather[0].main;
 
