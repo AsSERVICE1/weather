@@ -66,14 +66,23 @@ const getWeatherData = async () => {
         const {dt, main, sys, weather, wind, name} = data;
 
         temp.innerHTML = main.temp;
+
         prePercent.innerHTML = main.feels_like;
+
         humidPercent.innerHTML = `${main.humidity}%` ; 
+
         windKm.innerHTML = `${wind.speed} km/h`; 
-        weatherMin.innerHTML = `min: ${main.temp_min.toFixed()}&#176;`    
-        weatherMax.innerHTML = `max: ${main.temp_max.toFixed()}&#176;`    
+
+        weatherMin.innerHTML = `min: ${main.temp_min.toFixed()}&#176;` ;
+
+        weatherMax.innerHTML = `max: ${main.temp_max.toFixed()}&#176;` ;
+
         weatherType.innerHTML = weather[0].main;
+
         weatherCountry.innerHTML = `${name}, ${getCountryName(sys.country)}`;
+
         weatherDate.innerHTML = getDateTime(dt);
+
         iconImg.forEach(icon => {
             icon.src = `http://openweathermap.org/img/w/${weather[0].icon}.png`;
         });
