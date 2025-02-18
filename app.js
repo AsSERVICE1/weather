@@ -61,7 +61,7 @@ const getWeatherData = async () => {
     try {
         const res = await fetch(weatherUrl);
         const data = await res.json();
-        console.log(data);
+        // console.log(data);
 
         const {dt, main, sys, weather, wind, name} = data;
 
