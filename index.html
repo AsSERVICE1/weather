@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container1">
+        <div class="search">
+            <form class="weather-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" class="city-name" placeholder="Enter your city, country">
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        
+        <div class="flip-card" tabIndex="0">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h3 class="weather-country">Hyderabad, Pakistan</h3>
+                <p class="weather-date">18-02-2025</p>
+                <div class="weathericon">
+                    <img class="icon-img" src="images/sun.png" width="100" alt="">
+                    <p class="weather-type">Sunny</p>
+                </div>
+                <h4 class="temp">23.5&#176;</h4>
+              </div>
+              <div class="flip-card-back">
+                <p class="back-p">wind <span class="wind-km">0 km/h</span></p>
+                <p class="back-p">humidity <span class="humid-percent">34%</span></p>
+                <p class="back-p">feels like <span class="pre-percent">0%</span></p>
+                <div class="weathericon icon-back">
+                    <!-- <img class="icon-img" src="images/sun.png" width="100" alt=""> -->
+                    <img class="icon-img" src="images/sun.png" width="100" alt="">
+
+                    
+                </div>
+                <!-- <h4 class="temp1">23.5&#176;</h4> -->
+                <div class="min-max">
+                    <p class="weather-min">min: 30&#176;</p>
+                    <p class="weather-max">max: 30&#176;</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+    <script src="app.js"></script>
+  </body>
+
+</html>
